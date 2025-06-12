@@ -45,6 +45,7 @@ public class FoodController {
 		model.addAttribute("totalpage",totalpage);
 		model.addAttribute("startPage",startPage);
 		model.addAttribute("endPage",endPage);
+		model.addAttribute("main_html","main/home");
 		
 		return "index";
 	}
@@ -54,6 +55,8 @@ public class FoodController {
 	{
 		FoodEntity vo=fService.foodDetailData(fno);
 		model.addAttribute("vo",vo);
-		return "detail";
+		model.addAttribute("main_html","food/detail");
+		
+		return "index";
 	}
 }
