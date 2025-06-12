@@ -28,7 +28,7 @@ PRICE      VARCHAR2(26)
 public class FoodEntity {
 	@Id
 	private int fno;
-	private String name,type,phone,address,theme,images,time,parking,content,price;
+	private String name,type,phone,address,theme,images,time,parking,content,price,poster;
 	private double score;
 	
 }
