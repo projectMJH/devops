@@ -54,7 +54,7 @@ jobs:
     
     - name: Deploy with rsync
       run: |
-        timeout 60s prsync -r -p 4 -e "ssh -c aes128-ctr -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+        timeout 60s rsync -e "ssh -c aes128-ctr -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
           -avz build/libs/*.jar ubuntu@43.200.173.46:~/app      
 
 
