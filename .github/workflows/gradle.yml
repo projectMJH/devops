@@ -28,15 +28,15 @@ jobs:
         chmod +x ./gradlew 
         
     # Gradle 의존성 캐시 (추가 옵션; setup-java의 cache: gradle로도 충분)
-    - name: Cache Gradle dependencies
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.gradle/caches/
-          ~/.gradle/wrapper/
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*','**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-    
+    #- name: Cache Gradle dependencies
+    #  uses: actions/cache@v3
+    #  with:
+    #    path: |
+    #      ~/.gradle/caches/
+    #      ~/.gradle/wrapper/
+    #    key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*','**/gradle-wrapper.properties') }}
+    #    restore-keys: |
+    #      ${{ runner.os }}-gradle-    
 
     # gradle 빌드 (병렬 및 on-demand 설정으로 빌드 속도 향상)
     - name: Build with Gradle
