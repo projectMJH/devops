@@ -23,7 +23,7 @@ jobs:
     # gradlew 권한 설정
     - name: Set gradlew permissions
       run: |
-        chmod +x ./gradlew
+        chmod +x ./gradlew 
 
     # gradle 빌드
     - name: Build with Gradle
